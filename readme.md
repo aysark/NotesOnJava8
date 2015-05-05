@@ -6,7 +6,7 @@ _The Java 8 release is arguably the biggest update to the Java lang since ever (
 ## Table of Contents
 
 - [Day 1](#day-1): [What's New in Java 8](#whats-new-in-java-8), [Interface Additions](#interface-addtions), [Functional Programming](#functional-programming), [New Stream API](#new-stream-api), [New Optional Type](#new-optional-type)  
-- [Day 2](day2.md): 
+- [Day 2](day2.md): [New Collector Class](day2.md#new-collector-class), [Revamped Date/Time API](day2.md#revamped-datetime-api), [Reflections Design Pattern using Proxy Class](day2.md#reflections-design-pattern-using-proxy-class), [Write Javascript With Java](day2.md#write-javascript-with-java), [CDI: Java Standard for Dependency Injection & Interception](day2.md#cdi-java-standard-for-dependency-injection-interception), [Misc](#misc)
 
 # Day 1
 ## What's New in Java 8
@@ -27,7 +27,7 @@ Note: JRE 8 is fully backward compatible with bytecode of previous Java versions
 ## Interface Additions
 Can now have static methods in interfaces to provide utility methods.
 
-```
+```java
 public interface AgendaItem {
 	static Comparator<AgendaItem> getDateTimeComparator() {
 		return new Comparator<AgendaItem>() {
@@ -46,7 +46,7 @@ public interface AgendaItem {
 ```
 
 Can now have default methods to leave existing implementations unchanged as you eventually end up changing your interface.
-```
+```java
 public interface DescriptionItem {
 
 	default String getDescription() {
@@ -87,7 +87,7 @@ Declartive programming, describe what the app should do- instead of how it shoul
 Ie. compare your SQL statement with any nontrivial collection getter Java function
 
 The Java Stream API allows for a declarative programming approach.
-```
+```java
 public List<DVD> getDVDsByStudio(String studio) {
 	Stream<DVD> dvds = DVDDao.getAllDVDs().filter(s -> studio.equals(s.getStudio()));
 	return dvds.collect(Collectors.toList());
