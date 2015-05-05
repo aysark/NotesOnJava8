@@ -5,9 +5,11 @@ _The Java 8 release is arguably the biggest update to the Java lang since ever (
 
 ## Table of Contents
 
-Day 1: [What's New in Java 8](#whats-new-in-java-8), [Interfaces](#interfaces), [Functional Programming](#functional-programming), [Stream API](#the-stream-api)
+- [Day 1](#day-1): [What's New in Java 8](#whats-new-in-java-8), [Interface Additions](#interface-addtions), [Functional Programming](#functional-programming), [New Stream API](#new-stream-api), [New Optional Type](#new-optional-type)  
+- [Day 2](day2.md): 
 
-# What's New in Java 8
+# Day 1
+## What's New in Java 8
 - StreamAPI most important part of Java 8, builtin support for mapreduce
 - Java almost as if transitioning from OO to scripting (think Python) middleground
 - Finally supports lambdas/closures (a block of code/fn that we can pass around as data)
@@ -22,7 +24,7 @@ Day 1: [What's New in Java 8](#whats-new-in-java-8), [Interfaces](#interfaces), 
 
 Note: JRE 8 is fully backward compatible with bytecode of previous Java versions.
 
-# Interfaces
+## Interface Additions
 Can now have static methods in interfaces to provide utility methods.
 
 ```
@@ -53,7 +55,7 @@ public interface DescriptionItem {
 }
 ```
 
-# Functional Programming
+## Functional Programming
 Lambda API, 3 interfaces: 
 - Consumer (takes 1 param and returns a void)
 - Function (takes 1 param and returns a value)
@@ -79,7 +81,7 @@ We can access non final variables in lambda that are from the enclosing scope. I
 In a lambda expression, this, references the enclosing class, rather than the inner class.
 
 
-# The Stream API
+## New Stream API
 
 Declartive programming, describe what the app should do- instead of how it should do it.
 Ie. compare your SQL statement with any nontrivial collection getter Java function
@@ -103,6 +105,12 @@ Standard collections framework is not thread-safe.
 Streams allow us to manipulate collections of data in a thread-safe way.  It handles
 synchronization on retrieval and on terminal stream.  Intermediary steps should NOT modify the collection (if you were to roll your own).
 
+
+##New Optional Type
 Optional acts as a container for objects or it could be null.  It is used instead of returning null. `optional.isPresent()` to check if an object exists.
 
-Go to Day 2 >>
+Helps address `NullPointerExceptions`.  Seems like a solution looking for a problem.
+
+However, my declaring your methods to return an Optional, it serves as a reminder that the method may return a null.
+
+[Go to Day 2 >>](/day2.md)
