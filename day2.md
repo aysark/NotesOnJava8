@@ -1,6 +1,11 @@
 # Day 2
 
-- [Day 2](day2.md): [New Collector Class](#new-collector-class), [Revamped Date/Time API](#revamped-datetime-api), [Reflections Design Pattern using Proxy Class](#reflections-design-pattern-using-proxy-class), [Write Javascript With Java](#write-javascript-with-java), [CDI: Java Standard for Dependency Injection & Interception](#cdi-java-standard-for-dependency-injection-interception), [Misc](#misc)
+- [New Collector Class](#new-collector-class)
+- [Revamped Date/Time API](#revamped-datetime-api)
+- [Reflections Design Pattern using Proxy Class](#reflections-design-pattern-using-proxy-class)
+- [Write Javascript With Java](#write-javascript-with-java)
+- [CDI: Java Standard for Dependency Injection & Interception](#cdi-java-standard-for-dependency-injection-interception)
+- [Other New Features](#other-new-features)
 
 ## New Collector Class
 This further expands on the Steam API functionality.
@@ -90,7 +95,7 @@ public static void main(String[] args) {
 }
 ```
 
-Ref: https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Proxy.html
+[More on it here.](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Proxy.html)
 
 ##Write Javascript With Java
 Java 8 comes with the Nashorn Javascript Engine which allows you to write and eval Javascript code inside your Java code. There's an icecube joke somewhere here...
@@ -123,7 +128,7 @@ public static boolean validateEmail(String email) throws ScriptException, NoSuch
 ```
 
 ##CDI: Java Standard for Dependency Injection & Interception
-Dependency Injection allows us to ensure loosely coupled modules for our app.  Following the principles of inversion of control/hollywood principle.  Now Java ships with CDI, its DI framework, allowing us to use `@Inject` annotation to inject a dependency.  For example:
+Context and Dependency Injection (CDI) allows us to ensure loosely coupled modules for our app.  Following the principles of inversion of control/hollywood principle.  Now Java ships with CDI, a DI framework, allowing us to use `@Inject` annotation to inject a dependency.  For example:
 ```java
 	@Inject
 	private BlurayRepository repository;
@@ -131,9 +136,9 @@ Dependency Injection allows us to ensure loosely coupled modules for our app.  F
 
 This assumes we have a BlurayRepository interface and atleast one impl (otherwise we will get an ExceptionInInitializerError).    
 
-##Misc
+##Other New Features
 `Arrays.parallelSort`` assigns sorting tasks to multiple threads.  More performant for larger arrays.
 
 Improved diamond operator usage, can do: `print(new Shop<>)`
 
-[Go to Day 3 >>](/day3.md)
+[Index](readme.md) | [Go to Day 3 >>](/day3.md)

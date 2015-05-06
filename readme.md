@@ -1,12 +1,15 @@
 # Intro
-These are my own notes to a week long Java 8 course.  These notes are designed to provide a quick overview of major changes or new ideas, it is not a comprehensive guide and certainly does not outline all changes introduced with Java 8.  But for any seasoned developers, it should serve as a good refresher.
+These are my own notes to a week long Java 8 course (which also touches on JEE).  These notes are designed to provide a quick overview of major changes or new ideas, it is not a comprehensive guide and certainly does not outline all changes introduced with Java 8.  But for any seasoned developers, it should serve as a good refresher.
 
-_The Java 8 release is arguably the biggest update to the Java lang since ever (even bigger than 5)._
+_The Java 8 release is arguably the biggest update to the Java lang since ever._
+
+Let me know if I missed anything important or any typos.
 
 ## Table of Contents
 
 - [Day 1](#day-1): [What's New in Java 8](#whats-new-in-java-8), [Interface Additions](#interface-addtions), [Functional Programming](#functional-programming), [New Stream API](#new-stream-api), [New Optional Type](#new-optional-type)  
-- [Day 2](day2.md): [New Collector Class](day2.md#new-collector-class), [Revamped Date/Time API](day2.md#revamped-datetime-api), [Reflections Design Pattern using Proxy Class](day2.md#reflections-design-pattern-using-proxy-class), [Write Javascript With Java](day2.md#write-javascript-with-java), [CDI: Java Standard for Dependency Injection & Interception](day2.md#cdi-java-standard-for-dependency-injection-interception), [Misc](#misc)
+- [Day 2](day2.md): [New Collector Class](day2.md#new-collector-class), [Revamped Date/Time API](day2.md#revamped-datetime-api), [Reflections Design Pattern using Proxy Class](day2.md#reflections-design-pattern-using-proxy-class), [Write Javascript With Java](day2.md#write-javascript-with-java), [CDI: Java Standard for Dependency Injection & Interception](day2.md#cdi-java-standard-for-dependency-injection-interception), [Other New Features](day2.md#other-new-features)
+- [Day 3](day3.md): [CDI Cont'd: Using Qualifiers](#day3.md#cdi-contd-using-qualifiers), [Dealing With Data](#day3.md#dealing-with-data), [Websockets](#day3.md#websockets)
 
 # Day 1
 ## What's New in Java 8
