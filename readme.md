@@ -10,17 +10,18 @@ Let me know if I missed anything important or any typos.
 - [Day 1](#day-1): [What's New in Java 8](#whats-new-in-java-8), [Interface Additions](#interface-addtions), [Functional Programming](#functional-programming), [New Stream API](#new-stream-api), [New Optional Type](#new-optional-type)  
 - [Day 2](day2.md): [New Collector Class](day2.md#new-collector-class), [Revamped Date/Time API](day2.md#revamped-datetime-api), [Reflections Design Pattern using Proxy Class](day2.md#reflections-design-pattern-using-proxy-class), [Write Javascript With Java](day2.md#write-javascript-with-java), [CDI: Java Standard for Dependency Injection & Interception](day2.md#cdi-java-standard-for-dependency-injection-interception), [Other New Features](day2.md#other-new-features)
 - [Day 3](day3.md): [CDI Cont'd: Using Qualifiers](#day3.md#cdi-contd-using-qualifiers), [Dealing With Data](#day3.md#dealing-with-data), [Websockets](#day3.md#websockets)
+- [Day 4](day4.md): [Asynchronous Servlets](day4.md#asynchronous-servlets), [Spring MVC and REST Support](#day4.md#spring-mvc-and-rest-support), [GoF Patterns](day4.md#gof-patterns)
 
 # Day 1
 ## What's New in Java 8
 - StreamAPI most important part of Java 8, builtin support for mapreduce
 - Java almost as if transitioning from OO to scripting (think Python) middleground
 - Finally supports lambdas/closures (a block of code/fn that we can pass around as data)
--- not new, we used to do it with eventhandlers, now though we simplified the syntax 
+-- not new, we used to do it with eventhandlers, now though we simplified the syntax.  Some may call it syntactic sugar.
 -- and no longer need interface
 - Added foreach method for collections
 - Redesigned underlying multithreading code
-- New Javascript scripting engine (for Java app extensibaility)
+- Improved Javascript scripting engine (for Java app extensibaility)
 - Default and static methods in interfaces
 - Replaced the DateTime API
 
