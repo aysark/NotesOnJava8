@@ -69,4 +69,4 @@ Exception in thread "main" java.lang.IllegalAccessException: Class com.s.Main ca
 	at com.s.Main.main(Main.java:6)
 ``` 
 
-[Index](readme.md) | [Go to Day 5 >>](/day5.md)
+[Index](readme.md)

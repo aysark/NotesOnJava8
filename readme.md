@@ -1,5 +1,5 @@
 # Intro
-These are my own notes to a week long Java 8 course (which also touches on JEE).  These notes are designed to provide a quick overview of major changes or new ideas, it is not a comprehensive guide and certainly does not outline all changes introduced with Java 8.  But for any seasoned developers, it should serve as a good refresher.
+These are my own notes to a week long Java 8 course (which also touches on JEE, Spring and design patterns).  These notes are designed to provide a quick overview of major changes, new ideas or just simply cool stuff!  It is not a comprehensive guide and certainly does not outline all changes introduced with Java 8.  But for any seasoned developers, it should serve as a good refresher.
 
 _The Java 8 release is arguably the biggest update to the Java lang since ever._
 
@@ -107,8 +107,7 @@ Very similar to Hibernate framework.
 Standard collections framework is not thread-safe.
 
 Streams allow us to manipulate collections of data in a thread-safe way.  It handles
-synchronization on retrieval and on terminal stream.  Intermediary steps should NOT modify the collection (if you were to roll your own).
-
+synchronization on retrieval and on terminal stream.  Intermediary steps should NOT modify the collection (if you were to roll your own).  It also is far more efficient than say an Iterator since it doesn't take the whole collection in memory.
 
 ##New Optional Type
 Optional acts as a container for objects or it could be null.  It is used instead of returning null. `optional.isPresent()` to check if an object exists.
