@@ -14,14 +14,14 @@ Let me know if I missed anything important or any typos.
 
 # Day 1
 ## What's New in Java 8
-- StreamAPI most important part of Java 8, builtin support for mapreduce
-- Java almost as if transitioning from OO to scripting (think Python) middleground
+- StreamAPI most important part of Java 8, built-in support for mapreduce
+- Java almost as if transitioning from OO to scripting (think Python) middle-ground
 - Finally supports lambdas/closures (a block of code/fn that we can pass around as data)
--- not new, we used to do it with eventhandlers, now though we simplified the syntax.  Some may call it syntactic sugar.
+-- not new, we used to do it with eventhandlers, now though we simplified the syntax.  Some may call it syntactic sugar.  
 -- and no longer need interface
 - Added foreach method for collections
 - Redesigned underlying multithreading code
-- Improved Javascript scripting engine (for Java app extensibaility)
+- Improved Javascript scripting engine (for Java app extensibility)
 - Default and static methods in interfaces
 - Replaced the DateTime API
 
@@ -52,7 +52,6 @@ public interface AgendaItem {
 Can now have default methods to leave existing implementations unchanged as you eventually end up changing your interface.
 ```java
 public interface DescriptionItem {
-
 	default String getDescription() {
 		return "descriptionItem: "+toString();
 	}
@@ -69,12 +68,13 @@ All these interfaces must only have one abstract method (this is what gets imple
 
 Examples: 
 `list.forEach(myStr -> System.out.println(myStr))`
-`list.forEach(System.out::println)` _wraps the println fn into a lambda_
+_You can also wrap the println fn into a lambda:_
+`list.forEach(System.out::println)` 
 
 Starting a new thread now takes one line...
 `(new Thread(() -> {System.out.println(Thread.currentThread().getName)} )).start()`
 
-Type inference has been improved (e is an ActionEvent that I need not declare to use it)
+Type inference has been improved (e is an ActionEvent that I need not declare)
 `button.addActionListener(e -> System.out.println("Button Clicked!"))`
 
 An example of a BiFunction
@@ -82,13 +82,13 @@ An example of a BiFunction
 
 We can access non final variables in lambda that are from the enclosing scope. It will be treated as final, and you can't assign a value to it (even from outside the lambda)
 
-In a lambda expression, this, references the enclosing class, rather than the inner class.
+In a lambda expression, __this__, references the enclosing class, rather than the inner class.
 
 
 ## New Stream API
 
-Declartive programming, describe what the app should do- instead of how it should do it.
-Ie. compare your SQL statement with any nontrivial collection getter Java function
+Declarative programming, describe what the app should do- instead of how it should do it.
+Ie. compare your SQL statement with any nontrivial collection getter Java function.
 
 The Java Stream API allows for a declarative programming approach.
 ```java
@@ -104,16 +104,13 @@ public List<String> getGenres() {
 ```
 Very similar to Hibernate framework.
 
-Standard collections framework is not thread-safe.
-
-Streams allow us to manipulate collections of data in a thread-safe way.  It handles
-synchronization on retrieval and on terminal stream.  Intermediary steps should NOT modify the collection (if you were to roll your own).  It also is far more efficient than say an Iterator since it doesn't take the whole collection in memory.
+Standard collections framework is not thread-safe.  Streams allow us to manipulate collections of data in a thread-safe way.  It handles synchronization on retrieval and on terminal stream.  Intermediary steps should NOT modify the collection (if you were to roll your own).  It also is far more efficient than say an Iterator since it doesn't take the whole collection in memory.
 
 ##New Optional Type
 Optional acts as a container for objects or it could be null.  It is used instead of returning null. `optional.isPresent()` to check if an object exists.
 
 Helps address `NullPointerExceptions`.  Seems like a solution looking for a problem.
 
-However, my declaring your methods to return an Optional, it serves as a reminder that the method may return a null.
+However, by declaring your methods to return an `Optional`, it serves as a reminder that the method __may__ return a null (thus use it judiciously).
 
 [Go to Day 2 >>](/day2.md)
