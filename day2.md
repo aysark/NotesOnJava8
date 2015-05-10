@@ -8,7 +8,7 @@
 - [Other New Features](#other-new-features)
 
 ## New Collector Class
-This further expands on the Steam API functionality.
+This further expands on the Stream API functionality.
 Contains a `groupingBy` method similar to a GROUP BY clause in a SQL query.  
 ```java
 public Map<String, Long> getDVDsInEachGenre() {
@@ -41,7 +41,7 @@ public static Appointment createFirstDayOfNextMonthAppointment(String descriptio
 ```
 
 ## Reflections Design Pattern using Proxy Class
-Imagine you had a Business object interface and its impl.  And you had a TransactionManager that you want decoupled from Business obj, but want it manage the transactional methods that are called by bus obj.
+Imagine you had a Business object interface and its impl.  And you had a TransactionManager that you want decoupled from Business obj, but want it to manage the transactional methods that are called by bus obj.
 
 Build an invoker as so (note: this code is rough, not compiled):
 ```java
